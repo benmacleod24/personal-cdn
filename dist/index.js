@@ -26,11 +26,6 @@ app.get("/images/:filename", (req, res) => __awaiter(void 0, void 0, void 0, fun
     // Extract parameters from the request
     const imageFilename = req.params.filename;
     const imageFormat = req.query.format || "png";
-    const token = req.query.token;
-    // Check for authentication token
-    if (!token || token !== process.env.TOKEN) {
-        return res.status(401).json("Unauthorized");
-    }
     // Check if image filename is provided
     if (!imageFilename) {
         return res.status(404).json("Filename not found.");
