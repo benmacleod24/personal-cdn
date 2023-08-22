@@ -12,8 +12,7 @@
 	"pre-commit": [
 		"ts.check",
 		"build",
-		"add-build",
-		"precommit-message"
+		"add-build"
 	],
 	"keywords": [
 		"cdn",
